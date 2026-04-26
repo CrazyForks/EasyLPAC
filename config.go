@@ -140,7 +140,7 @@ func LoadConfig() error {
 	case "windows":
 		ConfigInstance.EXEName = "lpac.exe"
 		ConfigInstance.LogDir = filepath.Join(exeDir, "log")
-	case "linux":
+	case "linux", "darwin":
 		ConfigInstance.EXEName = "lpac"
 		ConfigInstance.LogDir = filepath.Join("/tmp", "EasyLPAC-log")
 		_, err = os.Stat(filepath.Join(ConfigInstance.LpacDir, ConfigInstance.EXEName))
